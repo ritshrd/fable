@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/leaves.css">
+<style>
+    body{
+        margin: 0;
+    }
+    .main{
+background-image: url("img/fondo.png");
+background-size: cover;
+display: flex;
+height: 100vh;
+    }
+.arbol{
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    }
+.lion{
+    align-self: flex-end;
+    z-index: 10;
+    flex-grow: 1;
+
+}
+.textcontainer{
+padding-right:10em;
+}
+.titlefable{
+    padding: 3em;
+}
+.text{
+    width: 20em;
+    font-size: larger;
+    font-family: 'Georama', sans-serif;
+}
+
+</style>
+<body>
+    <div class="main">
+        <div id="leaves">
+            <i><img src="img/leave.png" alt=""></i>
+            <i><img src="img/leave2.png" alt=""></i>
+            <i><img src="img/leave.png" alt=""></i>
+            <i><img src="img/leave2.png" alt=""></i>
+            <i><img src="img/leave.png" alt=""></i>
+            <i><img src="img/leave2.png" alt=""></i>
+            <i><img src="img/leave.png" alt=""></i>
+            <i><img src="img/leave2.png" alt=""></i>
+            <i><img src="img/leave.png" alt=""></i>
+            <i><img src="img/leave2.png" alt=""></i>
+            <i><img src="img/leave.png" alt=""></i>
+         
+           
+          </div>
+            <div class="lion">
+                <lottie-player 
+                id="playerHandler"
+                src="\json\lion.json"  speed="1"  style="width: 80vh;height: auto;" loop autoplay></lottie-player>
+            </div>
+           
+            <div class="arbol">
+                <img src="img/Fables_41_separado_0006_Rama.png" alt="">
+            </div>
+            <div class="textcontainer">
+                <div class="titlefable">
+                    <img src="img/fabletitle.png" alt="">
+                    <div class="text">
+                    <p>
+                    Once when a Lion was asleep a little Mouse began running up and down upon him; this soon wakened the Lion, who placed his huge paw upon him, and opened his big jaws to swallow him. "Pardon, O King," cried the little Mouse: "forgive me this time, I shall never forget it: who knows what I may be able to do for you one of these days?" The Lion was much amused at the idea of the Mouse being able to help him that he lifted his paw and let him go.
+                    </p>
+                    <p>
+                    A few days later, the Lion was caught in the toils of a hunter's net. Just then the little Mouse happened to pass by, and seeing the sad plight in which the Lion was in, went up to him and soon gnawed away the net that bound the King of the jungle to free him. Was I not right?" said the little Mouse.
+                    </p>
+                    <p>
+                    Moral
+                    “Little friends may prove great friends”
+                    </p>
+                    </div>
+                </div>
+            </div>
+            
+        
+    </div>
+
+    <script>
+        const player = document.querySelector("#playerHandler");
+        player.addEventListener("loop", () => console.log("loop completed"));
+        player.addEventListener("frame", (evt) =>
+          console.log("frame entered", evt.detail)
+        );
+      </script>
+
+</body>
+</html>
