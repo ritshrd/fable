@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Lion and the Mouse</title>
 </head>
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="css/leaves.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Georama&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/leaves.css">
+
 <style>
     body{
         margin: 0;
@@ -21,21 +22,21 @@ background-image: url("img/fondo.png");
 background-size: cover;
 display: flex;
 height: 100vh;
+justify-content: space-around;
     }
 .arbol{
-    display: flex;
-    height: 100vh;
     position: absolute;
-    left: 0;
+    left: -200px;
     }
 .lion{
     align-self: flex-end;
     z-index: 10;
-    flex-grow: 1;
+    /* flex-grow: 0; */
+    width: 80vh;
 
 }
 .textcontainer{
-padding-right:10em;
+
 }
 .titlefable{
     padding: 3em;
@@ -67,11 +68,23 @@ padding-right:10em;
             <div class="lion">
                 <lottie-player 
                 id="playerHandler"
-                src="\json\lion.json"  speed="1"  style="width: 80vh;height: auto;" loop autoplay></lottie-player>
+                src="\json\lion.json"
+                speed="1"
+                style="width: auto;height: auto;"
+                loop
+                autoplay>
+                </lottie-player>
             </div>
            
             <div class="arbol">
-                <img src="img/Fables_41_separado_0006_Rama.png" alt="">
+                <lottie-player 
+                id="playerHandler2"
+                src="\json\mouse.json"
+                speed="1"
+                style="width: auto;height: 100vh;"
+                loop
+                autoplay>
+                </lottie-player>
             </div>
             <div class="textcontainer">
                 <div class="titlefable">
@@ -84,7 +97,9 @@ padding-right:10em;
                     A few days later, the Lion was caught in the toils of a hunter's net. Just then the little Mouse happened to pass by, and seeing the sad plight in which the Lion was in, went up to him and soon gnawed away the net that bound the King of the jungle to free him. Was I not right?" said the little Mouse.
                     </p>
                     <p>
-                    Moral
+                    <strong>Moral</strong>
+                    </p>
+                    <p>
                     “Little friends may prove great friends”
                     </p>
                     </div>
